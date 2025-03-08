@@ -8,3 +8,5 @@ A simple python script implementing the following:
 3. looking for the status element in the HTML
 
 - this was very easy, the site has the information directly in the HTML and not behind an API or JavaScript.
+
+- Of course, OOPS and SOLID principles have not been implemented. The goal of this code is to help non-coders understand the power of simple scripting. 
