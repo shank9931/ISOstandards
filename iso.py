@@ -5,7 +5,7 @@ import pandas as pd
 print("Script Started")
 
 # loading the excel file
-df = pd.read_excel("F:/standardsProject/standardsTask/stand1.xlsx")
+df = pd.read_excel("F:/standardsProject/inputDB.xlsx")
 
 # function to get status from excel
 def get_status(url):
@@ -28,6 +28,6 @@ def get_status(url):
 df["CurrentStatus"] = df["Link1"].apply(get_status)
 
 # save the updated data to a new excel file
-df.to_excel("standards1_updated.xlsx", index=False)
+df.to_excel("F:/standardsProject/outputDB.xlsx", index=False)
 
 print("Script Ended")
