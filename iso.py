@@ -13,15 +13,14 @@ def get_status(url):
         response = requests.get(url)
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            # adjusting the selector based on the website's structure
-            status_tag = soup.find("strong")
+            status_tag = soup.find("strong")  # adjusting the selector based on the website's structure
             if status_tag:
-                return status_tag.text.strip()
+                return status_tag.text.strip() # optimizing the text output
             else:
                 return "Status not found"
         else:
             return "URL not accessible"
-    except Exception as e:
+    except Exception as e: # error handling
         return str(e)
     
 # applying the function to each row and adding a new column to store the result
